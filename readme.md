@@ -32,3 +32,20 @@ Pets
 PetsDescription
 DrinksAlcohol
 Married
+
+We can setup a few services (I'm a fan of factories for this, but I'm self taught in Angular so I can be convinced otherwise!) for handling each 'chunk' of the full data model.
+
+- UserService - Keeps track of user information, I'm assuming this is populated via some authentication I won't be implementing here.
+
+Data Services - These will each have a 'get model' function we can use towards the end when building up the final object.
+
+- DemographicsService - Storing Demographics Information
+- AthleticsService - Storing Athletics Fields
+- AboutService - Our Ancillary Data
+
+- ProfileService - This service will handling submitting the final information to the server.
+
+Ancillary Services
+- OptionsService - We have a number of fields with multiple options, so we'll put them all in here for storage.
+
+This structure has a lot of advantages, namely we only expose or 'inject' the service to the page that needs it, and it persists since these are singletons, allowing us to go back and forth across the page (next/prev) without losing anything. We should also be able to reuse a ton of the templates on our final summary page.
