@@ -4,7 +4,7 @@ var app = express();
 var port = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 
-//var Profile = require('./api/models/profileModel');
+var Profile = require('./api/models/profileModel');
 
 var bodyParser = require('body-parser');
   
@@ -18,8 +18,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Setup Routes for the API
-//var routes = require('./api/routes/profileRoutes');
-//routes(app);
+var routes = require('./api/routes/profileRoutes');
+routes(app);
 
 // Listen for calls
 app.listen(port);
