@@ -12,7 +12,7 @@
             socialMedia: [],
             pets: "",
             petsDescription: "",
-            drinkAlcohol: "",
+            drinksAlcohol: "",
             married: ""
         };
 
