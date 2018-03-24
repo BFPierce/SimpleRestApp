@@ -49,3 +49,5 @@ Ancillary Services
 - OptionsService - We have a number of fields with multiple options, so we'll put them all in here for storage.
 
 This structure has a lot of advantages, namely we only expose or 'inject' the service to the page that needs it, and it persists since these are singletons, allowing us to go back and forth across the page (next/prev) without losing anything. We should also be able to reuse a ton of the templates on our final summary page.
+
+I'm also thinking these partitions might be nice to connect to microservices rather than the monolith I'm currently working on.
