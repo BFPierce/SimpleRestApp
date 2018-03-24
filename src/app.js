@@ -14,26 +14,26 @@
                 controller: "MainController",
                 controllerAs: "vm"
             })
-            .when("/demographics"),{
+            .when("/demographics",{
                 templateUrl: "demographics/demographics.html",
                 controller: "DemographicsController",
                 controllerAs: "vm"
-            }
-            .when("/athletics"),{
+            })
+            .when("/athletics",{
                 templateUrl: "athletics/athletics.html",
                 controller: "AthleticsController",
                 controllerAs: "vm"
-            }
-            .when("/about"),{
+            })
+            .when("/about",{
                 templateUrl: "about/about.html",
                 controller: "AboutController",
                 controllerAs: "vm"
-            }
-            .when("/summary"),{
+            })
+            .when("/summary",{
                 templateUrl: "summary/summary.html",
                 controller: "SummaryController",
                 controllerAs: "vm"
-            }
+            })
             .otherwise({ redirectTo: "/"});
 
         $locationProvider.html5Mode({ enabled: true }).hashPrefix('!');

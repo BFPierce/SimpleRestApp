@@ -18,7 +18,7 @@
         }
 
         function Previous(){
-            $location.path('athletics');
+            $location.path('/athletics');
         }
     }
 

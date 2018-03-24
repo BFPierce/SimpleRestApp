@@ -10,6 +10,8 @@
     function MainController($location, ProfileService){
         var vm = this;
 
+        ProfileService.CreateProfile();
+
         vm.Next();
 
         function Next(){
