@@ -2,12 +2,12 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('profileApp')
         .controller('AthleticsController', AthleticsController);
 
-    MainController.$inject = ['$location','AthleticsService'];
+    AthleticsController.$inject = ['$location','AthleticsService'];
 
-    function MainController($location, AthleticsService){
+    function AthleticsController($location, AthleticsService){
         var vm = this;
     }
 

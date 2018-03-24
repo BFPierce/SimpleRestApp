@@ -2,16 +2,18 @@
     'use strict';
 
     angular
-        .module('app')
-        .controller('SummaryController', MainController);
+        .module('profileApp')
+        .controller('SummaryController', SummaryController);
 
     SummaryController.$inject = ['$location',
+                                 'UserService',
                                  'AthleticsService',
                                  'AboutService',
                                  'DemographicsService',
                                  'ProfileService'];
 
     function SummaryController($location, 
+                               UserService,
                                AthleticsService,
                                AboutService,
                                DemographicsService,

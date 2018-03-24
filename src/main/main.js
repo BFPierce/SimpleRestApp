@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('profileApp')
         .controller('MainController', MainController);
 
     MainController.$inject = ['$location','ProfileService'];

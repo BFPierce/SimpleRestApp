@@ -2,10 +2,10 @@
     'use strict';
 
     angular
-        .module('app')
+        .module('profileApp')
         .controller('DemographicsController', DemographicsController);
 
-    MainController.$inject = ['$location','DemographicsService'];
+    DemographicsController.$inject = ['$location','DemographicsService'];
 
     function DemographicsController($location, DemographicsService){
         var vm = this;
