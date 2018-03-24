@@ -18,6 +18,7 @@
 
         var service = {};
         service.GetModel = GetModel;
+        service.SetModel = SetModel;
         return service;
 
         function GetModel(){
