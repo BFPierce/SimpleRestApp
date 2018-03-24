@@ -10,6 +10,7 @@
     function DemographicsController($location, DemographicsService, OptionsService){
         var vm = this;
 
+        vm.model = DemographicsService.GetModel();
         vm.nationalities = OptionsService.GetNationalityOptions();
         vm.genders = OptionsService.GetGenderOptions();
 
@@ -17,10 +18,12 @@
         vm.Previous = Previous;
 
         function Next(){
+            DemographicsService.SetModel(vm.model);
             $location.path('/athletics');
         }
 
         function Previous(){
+            DemographicsService.SetModel(vm.model);
             $location.path('/main');
         }
     }

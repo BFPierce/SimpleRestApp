@@ -21,7 +21,11 @@
         return service;
 
         function GetModel(){
-            return model;
+            return this.model;
+        }
+
+        function SetModel(obj){
+            this.model = obj;
         }
     }
 
