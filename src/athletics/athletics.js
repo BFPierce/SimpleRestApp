@@ -5,10 +5,13 @@
         .module('profileApp')
         .controller('AthleticsController', AthleticsController);
 
-    AthleticsController.$inject = ['$location','AthleticsService'];
+    AthleticsController.$inject = ['$location','AthleticsService','OptionsService'];
 
-    function AthleticsController($location, AthleticsService){
+    function AthleticsController($location, AthleticsService, OptionsService){
         var vm = this;
+
+        vm.sports = OptionsService.GetSportsOptions();
+        vm.teams = OptionsService.GetTeamOptions();
 
         vm.Next = Next;
         vm.Previous = Previous;

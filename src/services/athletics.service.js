@@ -8,14 +8,19 @@
     AthleticsService.$inject = ['$http'];
 
     function AthleticsService($http){
-        var model = { };
+        var model = { 
+            association: "",
+            team: "",
+            sports: "",
+            about: ""
+        };
 
         var service = {};
         service.GetModel = GetModel;
         return service;
 
         function GetModel(){
-
+            return model;
         }
     }
 
