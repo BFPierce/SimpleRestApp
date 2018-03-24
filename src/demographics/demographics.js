@@ -5,13 +5,16 @@
         .module('profileApp')
         .controller('DemographicsController', DemographicsController);
 
-    DemographicsController.$inject = ['$location','DemographicsService'];
+    DemographicsController.$inject = ['$location','DemographicsService','OptionsService'];
 
-    function DemographicsController($location, DemographicsService){
+    function DemographicsController($location, DemographicsService, OptionsService){
         var vm = this;
 
-        vm.Next();
-        vm.Previous();
+        vm.nationalities = OptionsService.GetNationalityOptions();
+        vm.genders = OptionsService.GetGenderOptions();
+
+        vm.Next = Next;
+        vm.Previous = Previous;
 
         function Next(){
             $location.path('/athletics');

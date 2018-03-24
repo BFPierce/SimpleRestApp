@@ -8,14 +8,20 @@
     DemographicsService.$inject = ['$http'];
 
     function DemographicsService($http){
-        var model = { };
+        var model = { 
+            name: "",
+            dob: "",
+            nationality: "",
+            location: "",
+            gender: ""
+        };
 
         var service = {};
         service.GetModel = GetModel;
         return service;
 
         function GetModel(){
-
+            return model;
         }
     }
 

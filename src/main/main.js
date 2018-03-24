@@ -10,9 +10,7 @@
     function MainController($location, ProfileService){
         var vm = this;
 
-        ProfileService.CreateProfile();
-
-        vm.Next();
+        vm.Next = Next;
 
         function Next(){
             $location.path('/demographics');

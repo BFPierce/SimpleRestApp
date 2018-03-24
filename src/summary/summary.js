@@ -21,8 +21,8 @@
         var vm = this;
 
 
-        vm.Submit();
-        vm.Previous();
+        vm.Submit = Submit;
+        vm.Previous = Previous;
 
         function Submit(){
 

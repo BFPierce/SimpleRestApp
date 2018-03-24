@@ -10,8 +10,8 @@
     function AthleticsController($location, AthleticsService){
         var vm = this;
 
-        vm.Next();
-        vm.Previous();
+        vm.Next = Next;
+        vm.Previous = Previous;
 
         function Next(){
             $location.path('/about');

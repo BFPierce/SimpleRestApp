@@ -10,8 +10,8 @@
     function AboutController($location, AboutService){
         var vm = this;
 
-        vm.Next();
-        vm.Previous();
+        vm.Next = Next;
+        vm.Previous = Previous;
 
         function Next(){
             $location.path('/summary');
