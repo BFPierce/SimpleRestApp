@@ -5,9 +5,9 @@
         .module('profileApp')
         .factory('ProfileService', ProfileService);
 
-    ProfileService.$inject = ['$http'];
+    ProfileService.$inject = ['$http','$window'];
 
-    function ProfileService($http){
+    function ProfileService($http, $window){
         var profiles = null;
 
         var service = {};
