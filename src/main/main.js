@@ -9,6 +9,12 @@
 
     function MainController($location, ProfileService){
         var vm = this;
+
+        vm.Next();
+
+        function Next(){
+            $location.path('/demographics');
+        }
     }
 
 })();

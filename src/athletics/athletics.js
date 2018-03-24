@@ -9,6 +9,17 @@
 
     function AthleticsController($location, AthleticsService){
         var vm = this;
+
+        vm.Next();
+        vm.Previous();
+
+        function Next(){
+            $location.path('/about');
+        }
+
+        function Previous(){
+            $location.path('/demographics');
+        }
     }
 
 })();

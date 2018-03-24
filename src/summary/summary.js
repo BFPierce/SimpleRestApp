@@ -19,6 +19,20 @@
                                DemographicsService,
                                ProfileService){
         var vm = this;
+
+
+        vm.Submit();
+        vm.Previous();
+
+        function Submit(){
+
+            // This will be attached to the promise later!
+            $location.path('/main');
+        }
+
+        function Previous(){
+            $location.path('/about');
+        }
     }
 
 })();

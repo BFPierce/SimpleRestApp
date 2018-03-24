@@ -9,6 +9,17 @@
 
     function DemographicsController($location, DemographicsService){
         var vm = this;
+
+        vm.Next();
+        vm.Previous();
+
+        function Next(){
+            $location.path('/athletics');
+        }
+
+        function Previous(){
+            $location.path('/main');
+        }
     }
 
 })();
