@@ -5,9 +5,7 @@
         .module('profileApp')
         .factory('AthleticsService', AthleticsService);
 
-    AthleticsService.$inject = ['$http'];
-
-    function AthleticsService($http){
+    function AthleticsService(){
         var model = { 
             association: "",
             team: "",
@@ -17,10 +15,15 @@
 
         var service = {};
         service.GetModel = GetModel;
+        service.SetModel = SetModel;
         return service;
 
         function GetModel(){
-            return model;
+            return this.model;
+        }
+
+        function SetModel(obj){
+            this.model = obj;
         }
     }
 

@@ -5,9 +5,7 @@
         .module('profileApp')
         .factory('DemographicsService', DemographicsService);
 
-    DemographicsService.$inject = ['$http'];
-
-    function DemographicsService($http){
+    function DemographicsService(){
         var model = { 
             name: "",
             dob: "",

@@ -1,4 +1,4 @@
-// In an idea; world this service would interact with a database or
+// In an ideal world this service would interact with a database or
 // web service to populate options, 
 // that isn't getting built today so this is just placeholder
 
@@ -35,6 +35,11 @@
 
         function GetTeamOptions(){
             let options = ['','Maple Leafs','Buffalo Bills','Buffalo Sabres','...'];
+            return options;
+        }
+
+        function GetServiceOptions(){
+            let options = ['','Facebook','Twitter','...'];
             return options;
         }
 

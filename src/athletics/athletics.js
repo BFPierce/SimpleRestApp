@@ -10,6 +10,7 @@
     function AthleticsController($location, AthleticsService, OptionsService){
         var vm = this;
 
+        vm.model = AthleticsService.GetModel();
         vm.sports = OptionsService.GetSportsOptions();
         vm.teams = OptionsService.GetTeamOptions();
 
@@ -17,10 +18,12 @@
         vm.Previous = Previous;
 
         function Next(){
+            AthleticsService.SetModel(model);
             $location.path('/about');
         }
 
         function Previous(){
+            AthleticsService.SetModel(model);
             $location.path('/demographics');
         }
     }
