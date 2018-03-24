@@ -18,12 +18,12 @@
         vm.Previous = Previous;
 
         function Next(){
-            AthleticsService.SetModel(model);
+            AthleticsService.SetModel(vm.model);
             $location.path('/about');
         }
 
         function Previous(){
-            AthleticsService.SetModel(model);
+            AthleticsService.SetModel(vm.model);
             $location.path('/demographics');
         }
     }

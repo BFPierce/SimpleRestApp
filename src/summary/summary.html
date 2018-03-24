@@ -1,5 +1,9 @@
 <h2>Summary Page</h2>
 
+<p ng-repeat="(key, value) in vm.model">
+    {{ key }} {{ value }}
+</p>
+
 <div class="row">
     <button type="button" class="btn btn-secondary btn-lg" ng-click="vm.Previous()">Previous</button>
     <button type="button" class="btn btn-success btn-lg" ng-click="vm.Next()">Submit</button>

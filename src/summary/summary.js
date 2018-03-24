@@ -20,14 +20,21 @@
                                ProfileService){
         var vm = this;
 
+        ProfileService.AddToProfile(UserService.GetModel);
+        ProfileService.AddToProfile(AthleticsService.GetModel);
+        ProfileService.AddToProfile(AboutService.GetModel);
+        ProfileService.AddToProfile(DemographicsService.GetModel);
+
+        vm.model = ProfileService.GetModel();
 
         vm.Submit = Submit;
         vm.Previous = Previous;
 
         function Submit(){
 
-            // This will be attached to the promise later!
-            $location.path('/main');
+            ProfileService.Submit(function(){
+                $location.path('/main');
+            });       
         }
 
         function Previous(){
